@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap');
+
+body {
+    background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Oswald', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 65px;
+    background-color: #111;
+    color: #fff;
+}
+
+nav ul li {
+    padding: 0px 11px;
+}
+
+nav .item {
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    padding: 4px 19px;
+    background-color: #e8e8e8;
+    color: #111;
+    margin: 0px 19px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .item:hover {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #c1c1c1;
+    border-radius: 12px;
+    text-decoration: underline;
+
+}
+
+.brand img {
+    width: 65px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-right: 85px;
+}
+
+.container {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 72vh;
+    /* background-color: #111; */
+    color: rgb(255, 255, 255);
+    border: 2px solid black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: larger;
+    text-decoration: underline;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    overflow: hidden;
+    background-image: url(bg.jpg);
+
+}
+
+.bottom {
+    position: sticky;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+.songItemContainer{
+    margin: 74px 0px;
+}
+.songItem{
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #fff;
+/* width: 80%; */
+color: #111;
+font-weight: bolder;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: 12px 0px;
+border-radius: 34px;
+}
+.songItem img{
+width: 44px;
+margin: 0px 23px;
+border-radius: 34px;
+}
+.timestamp{
+    margin: 0px 23px;
+}
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
