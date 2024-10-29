@@ -2,7 +2,7 @@ console.log("Welcome to spotify");
 
 // initialize your varibles
 let songIndex = 0;
-let audioElement = new Audio('first.mp3.mp3');
+let audioElement = new Audio('Songs/first.mp3.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -14,16 +14,16 @@ let masterSongName = document.getElementById('masterSongName');
 
 // Make Array of objects 
 let songs = [
-    { songName: "Mashoor Rap Song-Zb Rai", filepath: "1.mp3", coverPath: "1.jpg" },
-    { songName: "Party Music", filepath: "2.mp3", coverPath: "2.jpg" },
-    { songName: "Abhi toh party shuru hui hai", filepath: "3.mp3", coverPath: "3.jpg" },
-    { songName: "Chaar Bottle Vodka", filepath: "4.mp3", coverPath: "4.jpg" },
-    { songName: "Party-2 Song", filepath: "5.mp3", coverPath: "5.jpg" },
-    { songName: "bg Music", filepath: "6.mp3", coverPath: "6.jpg" },
-    { songName: "Abhi toh party shuru hui hai", filepath: "7.mp3", coverPath: "7.jpg" },
-    { songName: "Abhi toh party shuru hui hai", filepath: "8.mp3", coverPath: "8.jpg" },
-    { songName: "bg", filepath: "9.mp3", coverPath: "9.jpg" },
-    { songName: "bg Music", filepath: "10.mp3", coverPath: "10.jpg" },
+    { songName: "Mashoor Rap Song-Zb Rai", filepath: "Songs/1.mp3", coverPath: "Songs/1.jpg" },
+    { songName: "Party Music", filepath: "Songs/2.mp3", coverPath: "Songs/2.jpg" },
+    { songName: "Abhi toh party shuru hui hai", filepath: "Songs/3.mp3", coverPath: "Songs/3.jpg" },
+    { songName: "Chaar Bottle Vodka", filepath: "Songs/4.mp3", coverPath: "Songs/4.jpg" },
+    { songName: "Party-2 Song", filepath: "Songs/5.mp3", coverPath: "Songs/5.jpg" },
+    { songName: "bg Music", filepath: "Songs/6.mp3", coverPath: "Songs/6.jpg" },
+    { songName: "Abhi toh party shuru hui hai", filepath: "Songs/7.mp3", coverPath: "Songs/7.jpg" },
+    { songName: "Abhi toh party shuru hui hai", filepath: "Songs/8.mp3", coverPath: "Songs/8.jpg" },
+    { songName: "bg", filepath: "Songs/9.mp3", coverPath: "Songs/9.jpg" },
+    { songName: "bg Music", filepath: "Songs10/.mp3", coverPath: "Songs/10.jpg" },
 
     // { songName: "Mashoor Rap Song-Zb Rai", filepath: "first.mp3.mp3", coverPath: "1.jpg" },
     // { songName: "Party Music", filepath: "spotify1.mp3", coverPath: "2.jpg" },
@@ -101,7 +101,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src = `${songIndex + 1}.mp3`;
+        audioElement.src = `Songs/${songIndex + 1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.play();
         gif.style.opacity = 1;
@@ -123,7 +123,7 @@ document.getElementById('next').addEventListener('click', () => {
         songIndex += 1
 
     }
-    audioElement.src = `${songIndex + 1}.mp3`;
+    audioElement.src = `Songs/${songIndex + 1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
         audioElement.play();
         audioElement.currentTime = 0;
@@ -139,10 +139,11 @@ document.getElementById('previous').addEventListener('click', () => {
         songIndex -= 1
 
     }
-    audioElement.src = `${songIndex + 1}.mp3`;
+    audioElement.src = `Songs/${songIndex + 1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
         audioElement.play();
         audioElement.currentTime = 0;
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
 })
+
